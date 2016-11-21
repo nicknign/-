@@ -1,0 +1,458 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Androidserver.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""          // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Android server.ico"
+IDR_AndroidserverTYPE   ICON                    "res\\Android serverDoc.ico"
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",                  ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+    END
+    POPUP "服务器"
+    BEGIN
+        MENUITEM "启动监听",                        ID_32771
+        MENUITEM "关闭",                          ID_32772
+    END
+    POPUP "初始化设置"
+    BEGIN
+        MENUITEM "摄像头标定",                       ID_32775
+        MENUITEM "目标提取",                        ID_32774
+        MENUITEM "实时监视",                        ID_32776
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Android server"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Android server, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_ANDROIDSERVER_FORM DIALOGEX 0, 0, 669, 386
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "左转",IDC_Zuozhuan,122,34,50,14
+    PUSHBUTTON      "后退",IDC_Houtui,175,34,50,14
+    PUSHBUTTON      "右转",IDC_Youzhuan,233,34,50,14
+    PUSHBUTTON      "前进",IDC_Qianjin,176,14,50,14
+    GROUPBOX        "手动控制",IDC_STATIC,119,7,166,44
+    CONTROL         "",IDC_STC_DUMMY,"Static",SS_BLACKFRAME,122,64,209,146
+    LTEXT           "视频影像",IDC_STATIC,119,52,57,11
+    GROUPBOX        "目标追踪",IDC_STATIC,7,7,110,351
+    PUSHBUTTON      "停止",IDC_Tingzhi,232,14,50,14
+    LTEXT           "服务器状态",IDC_LINK_STATE,399,7,35,10
+    LTEXT           "速度",IDC_STATIC,318,38,14,10
+    CONTROL         "实时监视",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,21,39,10
+    EDITTEXT        IDC_EDIT1,334,37,34,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "加速",IDC_BUTTON6,370,37,26,13
+    PUSHBUTTON      "减速",IDC_BUTTON7,399,37,26,13
+    PUSHBUTTON      "手动拍摄",IDC_BUTTON8,371,20,54,13
+    CONTROL         "",IDC_TARGETMAIN,"Static",SS_BLACKFRAME,20,63,87,76
+    PUSHBUTTON      "目标跟踪",IDC_FIND,7,23,50,14
+    CONTROL         "显示跟踪",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,66,24,43,10
+    LTEXT           "垂直距离",IDC_STATIC,7,159,31,8
+    EDITTEXT        IDC_Distance,41,159,47,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "目标距离计算",IDC_Canculate_DIS,7,193,50,14
+    LTEXT           "水平距离",IDC_STATIC,7,175,28,8
+    EDITTEXT        IDC_width,42,175,45,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "模拟图像处理",IDC_PictureProcess,7,344,50,14
+    CONTROL         "",IDC_BACKMAIN,"Static",SS_BLACKFRAME,19,253,79,70
+    PUSHBUTTON      "自动直线行驶",IDC_advanceinline,66,344,50,14
+    PUSHBUTTON      "驶向目标",IDC_gototarget,67,326,50,14
+    CONTROL         "",IDC_STC_SHADE,"Static",SS_BLACKFRAME,122,215,208,140
+    CONTROL         "",IDC_MAP,"Static",SS_BLACKFRAME,349,65,23,20
+    PUSHBUTTON      "虚拟地图生成",IDC_BUTTON1,7,328,50,14
+    PUSHBUTTON      "驶向目标",IDC_RUNTarget,60,193,50,14
+    PUSHBUTTON      "路径生成",IDC_RoadCreat,7,212,50,14
+END
+
+IDD_ImageAnalyzing DIALOGEX 0, 0, 644, 283
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,533,262,50,14
+    PUSHBUTTON      "取消",IDCANCEL,587,262,50,14
+    PUSHBUTTON      "canny-test",IDC_CANNY,587,81,50,14
+    PUSHBUTTON      "灰度图",IDC_BUTTON11,519,101,50,14
+    CONTROL         "",IDC_PICTURE,"Static",SS_BLACKFRAME,7,7,495,269
+    PUSHBUTTON      "原图",IDC_YUANTU,519,83,50,14
+    PUSHBUTTON      "提取目标",IDC_BUTTON1,587,135,50,14
+    CONTROL         "",IDC_TARGET,"Static",SS_BLACKFRAME,518,156,119,97
+    PUSHBUTTON      "提取结束",IDC_close,519,137,50,14
+    PUSHBUTTON      "寻找目标",IDC_SEARCH,587,117,50,14
+    PUSHBUTTON      "地面分析",IDC_autochase,587,99,50,14
+    PUSHBUTTON      "提取背景",IDC_GetBackGround,519,119,50,14
+    CONTROL         "",IDC_BACK,"Static",SS_BLACKFRAME,517,7,120,68
+END
+
+IDD_CameraSet DIALOGEX 0, 0, 536, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CHUIZHIYUANLI,"Static",SS_BLACKFRAME,244,16,275,139
+    LTEXT           "摄像头高度H",IDC_STATIC,67,36,61,8
+    LTEXT           "摄像头倾斜角β",IDC_STATIC,67,52,61,8
+    LTEXT           "与成像底边距离S",IDC_STATIC,67,68,61,8
+    LTEXT           "垂直像素常数K",IDC_STATIC,67,84,61,8
+    EDITTEXT        IDC_chuizhi_H,139,36,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_chuizhi_B,139,51,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_chuizhi_s,139,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_chuizhi_K,139,81,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "垂直标定",IDC_STATIC,51,121,147,63
+    PUSHBUTTON      "自动标定",IDC_Auto_Deside,143,133,50,31
+    LTEXT           "焦距F",IDC_STATIC,68,100,57,8
+    EDITTEXT        IDC_chuizhi_F,139,96,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_zhiding_H,84,133,40,14,ES_AUTOHSCROLL
+    LTEXT           "指定H",IDC_STATIC,59,134,24,8
+    EDITTEXT        IDC_zhiding_D1,84,148,40,14,ES_AUTOHSCROLL
+    LTEXT           "起始点D1",IDC_STATIC,59,150,24,8
+    EDITTEXT        IDC_zhiding_D2,84,163,40,14,ES_AUTOHSCROLL
+    LTEXT           "中点D2",IDC_STATIC,59,166,19,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Android server.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Android server.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_ANDROIDSERVER_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 358
+    END
+
+    IDD_ImageAnalyzing, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 637
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 276
+    END
+
+    IDD_CameraSet, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 529
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+    IDP_SOCKETS_INIT_FAILED "Windows 套接字初始化失败。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Android server\n\nAndroid server\n\n\nAndroidserver.Document\nAndroid server.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Android server"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Androidserver.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"          // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

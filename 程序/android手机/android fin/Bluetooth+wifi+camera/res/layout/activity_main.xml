@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"		
+		android:layout_weight="1">		
+		<!--
+		<LinearLayout 
+		    android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:background="#ffffaa"
+			android:layout_weight="1">		    
+		    <Button
+		    android:id="@+id/startwifi"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:gravity="center"        
+        	android:text="@string/wifi_start" 
+        	android:padding="10dip"
+        	android:layout_weight="1"/>
+		    <Button
+		    android:id="@+id/stopwifi"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:gravity="center"        
+        	android:text="@string/wifi_stop" 
+        	android:padding="10dip"
+        	android:layout_weight="1"/>
+		    <Button
+		    android:id="@+id/readwifi"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:gravity="center"        
+        	android:text="@string/wifi_read" 
+        	android:padding="5dip"
+        	android:layout_weight="1"/>		    
+		</LinearLayout>
+		-->
+		<LinearLayout 
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+		    <EditText 
+		    android:id="@+id/editip"
+         	android:layout_height="wrap_content"
+         	android:layout_width="wrap_content" 
+         	android:layout_weight="1"        	
+         	android:hint="@string/edit_ip" />
+		    <EditText 
+		    android:id="@+id/port"
+         	android:layout_height="wrap_content"
+         	android:layout_width="wrap_content"         	
+         	android:hint="@string/port" />
+		    <Button
+		    android:id="@+id/link"
+     		android:layout_width="wrap_content"
+     		android:layout_height="wrap_content"
+     		android:text="@string/link" />
+		</LinearLayout>
+			
+		<LinearLayout	
+		android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:background="#ffffaa"
+		android:layout_weight="1">
+		    <EditText 
+		    android:id="@+id/receive"
+         	android:layout_height="wrap_content"
+         	android:layout_width="wrap_content"  
+         	android:layout_weight="1"       	
+         	android:hint="@string/receive" />
+		    <Button 
+		    android:id="@+id/test"
+     		android:layout_width="wrap_content"
+     		android:layout_height="wrap_content"
+     		android:text="@string/test"/>
+		    
+		</LinearLayout>
+				
+		<TextView
+		android:id="@+id/tvshown"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:background="#aa0000"
+        android:text="@string/hello_world"
+        android:layout_weight="1"/>
+		
+	</LinearLayout>
+	
+	
+    <LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<TableLayout 
+			
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			
+			>
+			<TableRow>
+			    <Button
+				android:id="@+id/speedup"				
+				android:text="加速"								
+				android:gravity="center"
+				/>			    
+			    <Button
+				android:id="@+id/speeddown"				
+				android:text="减速"
+				android:gravity="center"
+				/>			   
+				<TextView 
+				    android:id="@+id/speedshow"
+					android:text="（100）"
+					android:gravity="center" />		    
+			</TableRow>
+			<TableRow >			
+			<Button
+			android:id="@+id/btnL"			
+			android:text="左转"
+			android:gravity="center"
+			/>					
+			<Button
+				android:id="@+id/btnF"				
+				android:text="前进"
+				android:gravity="center"
+				/>			
+			<Button
+			    android:id="@+id/btnR"			   
+			    android:gravity="center"
+			    android:text="右转" />
+
+			</TableRow>
+			<TableRow >			  
+			   <TextView 
+					android:text=" "
+					/>
+			   <Button
+				android:id="@+id/btnB"			
+				android:text="后退"
+				android:gravity="center"
+				/>			   
+			   <Button
+				android:id="@+id/cameratest"			
+				android:text="摄像测试"
+				android:gravity="center"
+				/>
+			</TableRow>			
+		</TableLayout>		
+	</LinearLayout>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<FrameLayout 
+    	android:id="@+id/camera_preview1" 
+   	 	android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:layout_weight="1" 
+    	/>
+		</LinearLayout>
+	
+</LinearLayout>
